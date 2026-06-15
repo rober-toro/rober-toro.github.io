@@ -1,0 +1,507 @@
+# Futureverse Case Study Build Spec
+
+## Project Root
+
+`D:\rober-toro`
+
+## Page to Create
+
+`futureverse.html`
+
+## Case Study Title
+
+**Futureverse JP Localization, GTM & Product Communication**
+
+## Hero Subtitle
+
+**Simplifying Web3 onboarding, rewards, and ecosystem communication for the Japanese market.**
+
+## Case Positioning
+
+This case should present Futureverse as a cross-functional localization, onboarding, GTM, brand communication, and product feedback case.
+
+It should not be framed only as translation. The main story is:
+
+Rober supported Futureverse’s Japanese market entry by localizing complex Web3 onboarding flows, creating beginner-friendly product education materials, reviewing community and campaign feedback, and helping translate product concepts into clearer communication across FuturePass, Root Rewards, LINE, webinars, and campaign touchpoints.
+
+## Important Portfolio Positioning
+
+Rober Toro is an e-commerce-focused UX/UI Designer bridging design, content, frontend implementation, localization, and cross-cultural product communication.
+
+## Do Not Overclaim
+
+Do not present Rober as:
+
+* a pure UX researcher
+* a senior native-app specialist
+* a mature enterprise design-system lead
+* a backend developer
+* the sole owner of all Futureverse product design decisions
+
+Frame the work as:
+
+* JP localization
+* UX content
+* onboarding optimization
+* GTM support
+* brand / visual communication
+* feedback-informed product communication
+* support for the Futureverse design team
+
+## Result Wording
+
+Use careful wording:
+
+**Project-reported result:**
+The work contributed to a reported **+25–35% increase in wallet registrations**, with stronger engagement across LINE and webinar touchpoints.
+
+Important:
+
+* Say “reported” or “project-reported.”
+* Do not imply this was a controlled A/B test.
+* Do not overclaim direct causality.
+
+## Technical Rules
+
+* Static HTML/CSS/JS only
+* GitHub Pages compatible
+* No PHP
+* No backend contact forms
+* No reCAPTCHA
+* No form.js
+* Page-specific CSS goes into `css/09_custom.css`
+* Avoid rewriting global CSS unless absolutely necessary
+* Use the existing portfolio style and case-study structure from `robodachi.html` and `yogibo.html`
+* Prefer class prefix `.futureverse-` or `.fv-` to avoid CSS collisions
+* Keep homepage, ROBODACHI, and Yogibo pages working
+* Do not make unrelated changes
+
+## Contact Rules
+
+Use existing portfolio contact info only:
+
+* Email: `rober24.95@gmail.com`
+* LinkedIn: `https://www.linkedin.com/in/rober-toro-802953189/`
+* CV: `assets/docs/rober-toro-cv.pdf`
+
+Do not use:
+
+* public GitHub link
+* “Hire Me” language
+
+---
+
+# Asset Workflow
+
+## Raw Asset Folder
+
+I will put all Futureverse images into:
+
+`images/work-single/futureverse/raw/`
+
+The raw folder may contain messy filenames. Do not ask me to rename them manually.
+
+## Codex Asset Task
+
+1. Visually review all images inside `images/work-single/futureverse/raw/`
+2. Group assets by purpose:
+
+   * Hero candidates
+   * Onboarding / guide screenshots
+   * Rewards / token education
+   * Brand / campaign visuals
+   * Figma / process / collaboration
+   * Optional decorative assets
+   * Unused / unclear assets
+3. Copy only selected assets into:
+
+`images/work-single/futureverse/selected/`
+
+4. Rename copied assets with clean lowercase web-safe names.
+5. Do not delete or modify the raw folder.
+6. Use only selected assets in `futureverse.html`.
+7. Lazy-load all non-hero images.
+8. Add useful alt text to every image.
+9. If an image is beautiful but not directly UX-related, it can still be used in the **Brand & Visual Communication** section.
+10. If an image is unclear, do not use it as core evidence.
+
+---
+
+# Recommended Page Structure
+
+## 1. Hero
+
+Purpose: Make the case feel premium, futuristic, and market-entry focused.
+
+Content:
+
+**Title:**
+Futureverse JP Localization, GTM & Product Communication
+
+**Subtitle:**
+Simplifying Web3 onboarding, rewards, and ecosystem communication for the Japanese market.
+
+**Body:**
+I supported Futureverse’s Japanese market entry by localizing complex Web3 onboarding flows, creating beginner-friendly product education materials, reviewing community and campaign feedback, and helping translate product concepts into clearer communication across FuturePass, Root Rewards, LINE, webinars, and campaign touchpoints.
+
+**Tags:**
+
+* Localization
+* Onboarding UX
+* GTM Support
+* Brand Communication
+* Web3 Education
+
+Visual:
+
+* Use the strongest Futureverse visual from the raw folder.
+* If several visuals work well, create a collage.
+* Dark premium style preferred.
+
+---
+
+## 2. Project Snapshot
+
+Use compact cards.
+
+Cards:
+
+**Role**
+JP Localization / UX Content / GTM Support
+
+**Timeline**
+2024–2025
+
+**Market**
+Japan
+
+**Tools**
+Figma, Google Forms, LINE, Webinars, shared GDD / asset library
+
+**Collaboration**
+Futureverse design team, NZ team, community / marketing touchpoints
+
+**Result**
+Project-reported +25–35% wallet registrations
+
+---
+
+## 3. Challenge
+
+Headline:
+
+**Making Web3 onboarding understandable and trustworthy for Japanese users.**
+
+Body:
+
+Futureverse users needed to understand FuturePass, wallet connection, sign-in methods, Root Rewards, referrals, token-related actions, and ecosystem participation. The challenge was not only translation, but reducing friction, building trust, and creating repeatable communication for Japanese users.
+
+Challenge cards:
+
+1. **Complex wallet and sign-in flows**
+   Users had to understand email login, MetaMask, wallet connection, verification, and FuturePass ownership.
+
+2. **Web3 terminology barrier**
+   Concepts like token swaps, rewards, staking, referrals, and wallet signatures needed clearer Japanese explanations.
+
+3. **Community education across channels**
+   LINE, webinars, guides, and campaign assets needed consistent localized messaging.
+
+4. **Feedback back to the design team**
+   User questions, analytics, interviews, and Google Forms helped identify friction points and communication gaps.
+
+---
+
+## 4. My Role
+
+Describe the work as cross-functional support.
+
+Include:
+
+* Localized onboarding and product education content
+* Created and adapted Japanese GTM / campaign assets
+* Reviewed LINE and community engagement signals
+* Used feedback from user interviews and Google Forms
+* Worked with cross-team analytics from the NZ team
+* Communicated findings and user feedback to the Futureverse design team
+* Worked in Figma using shared GDD references and asset libraries
+* Supported consistency across localized guides, campaign visuals, and product communication
+
+Tone:
+Do not call this full UX research ownership. Use “feedback-informed localization and product communication.”
+
+---
+
+## 5. Localization Strategy
+
+Create a clean process diagram:
+
+**Understand → Localize → Simplify → Validate → Activate**
+
+Copy:
+
+The localization process started with understanding the original product intent, shared GDD, and ecosystem terminology. From there, the content was adapted for Japanese users by simplifying complex Web3 actions without losing technical accuracy. Feedback from community channels, interviews, forms, and analytics helped refine the communication, while GTM assets supported repeated activation through LINE, webinars, guides, and campaigns.
+
+---
+
+## 6. Data & Feedback Loop
+
+This section is important because it shows that the work was informed by user signals, not only visual design.
+
+Use two columns:
+
+### Inputs
+
+* LINE engagement and community response
+* Cross-team analytics from the NZ team
+* User interviews
+* Google Forms
+* Webinar questions
+* Repeated support / confusion points
+
+### Outputs
+
+* Clearer onboarding guides
+* Improved Japanese explanations
+* Better FAQ / support communication
+* Feedback passed to the Futureverse design team
+* Better alignment between product education and campaign assets
+
+Suggested section copy:
+
+To support localization decisions, I reviewed feedback from Japanese community touchpoints and cross-team information. LINE engagement, webinar questions, user interviews, Google Forms, and analytics shared by the NZ team helped identify where users were confused or hesitant. These signals were used to improve Japanese explanations, clarify onboarding steps, and provide feedback to the Futureverse design team.
+
+---
+
+## 7. Onboarding Flow System
+
+Create two large cards.
+
+### A. Email-Based FuturePass Onboarding
+
+User type:
+Web3 beginners
+
+Goal:
+Reduce wallet-first friction.
+
+Flow:
+Open FuturePass → choose email → enter email → verify code → complete account
+
+UX note:
+This path made FuturePass feel more approachable for users who were not ready to begin with a crypto wallet.
+
+### B. MetaMask-Based FuturePass Onboarding
+
+User type:
+Web3-ready users
+
+Goal:
+Support wallet ownership and ecosystem access.
+
+Flow:
+Open MetaMask browser → access FuturePass → choose MetaMask → approve connection/signature → complete account
+
+UX note:
+This path supported users who already understood wallet-based access while still requiring clear step-by-step Japanese guidance.
+
+Visuals:
+Use screenshots or guide images from the raw folder if available. If screenshots are too small, use them as large image cards with captions.
+
+---
+
+## 8. Education Content Library
+
+Create a grid of 3–4 cards.
+
+Cards:
+
+### FuturePass Account Creation
+
+User goal:
+Create a FuturePass account through email or MetaMask.
+
+Communication issue:
+Users needed to understand the difference between simple email onboarding and wallet-based onboarding.
+
+### Root Rewards Registration & Redeem
+
+User goal:
+Register for Root Rewards, understand points, referrals, and redeem flow.
+
+Communication issue:
+Users needed to understand why they should return after account creation.
+
+### CENNZ → ROOT Swap Guide
+
+User goal:
+Understand how to swap or migrate tokens through FuturePass-related flows.
+
+Communication issue:
+This was more advanced and required clear prerequisite explanation.
+
+### Sign-Up Method Comparison
+
+User goal:
+Choose the right sign-in or wallet connection method.
+
+Communication issue:
+Too many login options can create decision friction for new users.
+
+---
+
+## 9. Brand & Visual Communication
+
+This section must be included.
+
+Brand design and campaign visuals are allowed, even if they are not pure UX. Frame them as part of GTM and product communication.
+
+Headline:
+
+**Turning technical product education into market-ready communication.**
+
+Copy:
+
+Visual communication helped make Web3 concepts feel more approachable, premium, and campaign-ready for the Japanese market. Beyond step-by-step guides, I created and adapted localized campaign assets that supported announcements, community education, webinars, rewards communication, and ecosystem updates.
+
+Possible visuals:
+
+* Localized campaign banners
+* Futureverse / Root Rewards visuals
+* News or monthly summary assets
+* Event / webinar communication visuals
+* Brand-consistent Japanese layout adaptations
+
+Use strong images from the raw folder.
+
+---
+
+## 10. Figma Collaboration System
+
+Purpose:
+Show how the work happened inside a shared team environment.
+
+Copy:
+
+The work was managed inside Figma, where the team used shared GDD references, asset libraries, and collaborative design files. This helped keep localized content, campaign visuals, and product education materials aligned with the broader Futureverse brand and product direction.
+
+Suggested diagram if no screenshot is available:
+
+**Shared GDD → Asset Library → Localized Guides → GTM Assets → Community Feedback → Design Team Feedback**
+
+Use a clean process layout.
+
+---
+
+## 11. Reward & Referral Activation
+
+Use Root Rewards and token-cycle visuals if available.
+
+Copy:
+
+After account creation, the experience needed reasons for users to return. Root Rewards created an activation loop around points, referrals, redeem actions, and recurring reward cycles. The Japanese communication needed to explain this loop clearly enough for new users to understand why they should continue participating.
+
+Possible visual content:
+
+* referral banner
+* reward cycle diagram
+* Root Rewards dashboard/guide screenshot
+* token/reward explanation graphic
+
+---
+
+## 12. GTM / Community Communication
+
+Copy:
+
+Localized campaign assets and community content helped turn product education into repeatable communication across Japanese user channels. This supported announcements, webinars, onboarding reminders, reward-related education, and feedback collection.
+
+Show:
+
+* 3-image campaign showcase
+* LINE / webinar-related assets if available
+* campaign or news banners
+
+---
+
+## 13. Results
+
+Use three result cards.
+
+### Project-reported +25–35% wallet registrations
+
+Localized onboarding and communication contributed to improved wallet registration performance.
+
+### Stronger LINE engagement
+
+Localized announcements and user education supported more active community touchpoints.
+
+### Stronger webinar engagement
+
+Clearer Japanese communication helped support webinar participation and follow-up education.
+
+Small note:
+
+Metrics are project-reported and directional unless analytics screenshots are added later.
+
+---
+
+## 14. Reflection
+
+Copy:
+
+This project taught me that Web3 localization is not only language translation. It requires product understanding, UX simplification, trust-building, visual communication, and a feedback loop between users, community channels, and the product team. The key challenge was making advanced ecosystem actions feel approachable without removing the accuracy required for wallet and token-related workflows.
+
+---
+
+# Visual Direction
+
+Use a dark, premium, futuristic editorial layout.
+
+Style direction:
+
+* black / near-black background
+* large white typography
+* subtle gray borders
+* glassy or soft-gradient cards
+* strong image sections
+* restrained accent colors from the assets
+* avoid making the page too colorful
+* use brand visuals as premium highlights
+
+The page should feel closer to a Web3 / product communication case than a traditional corporate website.
+
+---
+
+# Responsive Requirements
+
+Desktop:
+
+* Strong editorial case-study layout
+* Large visuals
+* Two-column sections where appropriate
+
+Tablet:
+
+* Preserve two-column only where readable
+
+Mobile:
+
+* Stack all sections
+* Avoid tiny unreadable screenshots
+* Make guide images full-width
+* Use captions when needed
+* Keep text readable on dark backgrounds
+
+---
+
+# Final Codex Report Required
+
+After implementation, report:
+
+1. Files created/edited
+2. Raw assets reviewed
+3. Assets selected and renamed
+4. Assets not used and why
+5. Missing image references, if any
+6. Assumptions made
