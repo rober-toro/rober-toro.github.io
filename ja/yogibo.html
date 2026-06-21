@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <title>Yogibo Singapore — Rober Toro</title>
+    <link rel="icon" href="../images/icon.webp" type="image/gif" sizes="16x16">
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="description" content="Rober ToroによるYogibo Singaporeのケーススタディ。Shopify UX、フロントエンド実装、CMS、パフォーマンス、ビジュアルコンテンツ、デジタル運用を紹介します。">
+    <meta content="Yogibo Singapore、Shopify UX、ECデザイン、フロントエンド実装、ポートフォリオ" name="keywords">
+    <meta content="Rober Toro" name="author">
+    <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap">
+    <link href="../css/plugins.css" rel="stylesheet" type="text/css">
+    <link href="../css/style.css" rel="stylesheet" type="text/css">
+    <link href="../css/coloring.css" rel="stylesheet" type="text/css">
+    <link id="colors" href="../css/colors/scheme-01.css" rel="stylesheet" type="text/css">
+    <link href="../css/09_custom.css" rel="stylesheet" type="text/css">
+    <link rel="alternate" hreflang="en" href="../yogibo.html">
+    <link rel="alternate" hreflang="ja" href="yogibo.html">
+    <script src="../js/language-router.js"></script>
+    <style>
+        .case-hero-tags,
+        .case-meta-list,
+        .case-proof-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .case-hero-tags li {
+            display: inline-block;
+            margin: 0 .5rem .5rem 0;
+            padding: .4rem .85rem;
+            border: 1px solid rgba(0, 0, 0, .20);
+            border-radius: 999px;
+            font-size: 14px;
+        }
+
+        .case-proof-list li {
+            display: inline-block;
+            margin: 0 .5rem .5rem 0;
+            padding: .4rem .85rem;
+            border: 1px solid rgba(255, 255, 255, .25);
+            border-radius: 999px;
+            font-size: 14px;
+        }
+
+        .case-area-card,
+        .case-note-card {
+            height: 100%;
+            padding: 2rem;
+            border: 1px solid rgba(0, 0, 0, .08);
+            background: rgba(0, 0, 0, .03);
+        }
+
+        .case-meta-card,
+        .case-stat-card,
+        .case-timeline-item {
+            height: 100%;
+            padding: 2rem;
+            border: 1px solid rgba(255, 255, 255, .08);
+            background: rgba(255, 255, 255, .03);
+        }
+
+        .case-timeline-item {
+            position: relative;
+            padding-left: 4.25rem;
+        }
+
+        .case-timeline-item:before {
+            content: "";
+            position: absolute;
+            left: 1.4rem;
+            top: 1.2rem;
+            bottom: -1.2rem;
+            width: 1px;
+            background: rgba(255, 255, 255, .15);
+        }
+
+        .case-timeline-item:last-child:before {
+            display: none;
+        }
+
+        .case-timeline-dot {
+            position: absolute;
+            left: .95rem;
+            top: 1.2rem;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: var(--primary-color);
+        }
+
+        .case-figure-label {
+            font-size: 13px;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+        }
+
+        .case-stat-number {
+            font-size: 48px;
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+
+        .case-section-intro {
+            max-width: 760px;
+        }
+
+        .case-dark-block {
+            background: #111111;
+            border: 1px solid rgba(255, 255, 255, .08);
+            color: rgba(255, 255, 255, .82);
+        }
+
+        .case-dark-block .subtitle {
+            background: rgba(255, 255, 255, .14);
+            color: #ffffff;
+        }
+
+        .case-dark-block p {
+            color: rgba(255, 255, 255, .78);
+            max-width: 58ch;
+        }
+
+        .case-meta-list li {
+            padding: .9rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, .08);
+        }
+
+        .case-meta-list li:last-child {
+            border-bottom: 0;
+        }
+
+        .case-gallery-caption {
+            background: rgba(0, 0, 0, .55);
+        }
+
+        .case-img-link {
+            display: block;
+            height: 100%;
+        }
+
+        .case-img-hero {
+            height: 520px;
+        }
+
+        .case-img-compare {
+            height: 420px;
+        }
+
+        .case-img-standalone {
+            height: 460px;
+        }
+
+        .case-img-side {
+            height: 380px;
+        }
+
+        .case-img-supporting {
+            height: 220px;
+        }
+
+        .case-img-thumb {
+            height: 260px;
+        }
+
+        .case-img-natural {
+            height: auto;
+        }
+
+        .case-img-natural .crdi-yogibo-img-cover {
+            height: auto;
+            object-fit: contain;
+        }
+
+        @media (max-width: 767.98px) {
+            .case-meta-card,
+            .case-area-card,
+            .case-stat-card,
+            .case-note-card,
+            .case-timeline-item {
+                padding: 1.5rem;
+            }
+
+            .case-stat-number {
+                font-size: 36px;
+            }
+
+            .case-img-hero,
+            .case-img-compare,
+            .case-img-standalone,
+            .case-img-side {
+                height: 340px;
+            }
+
+            .case-img-supporting {
+                height: 220px;
+            }
+
+            .case-img-thumb {
+                height: 240px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header-light transparent has-topbar">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="de-flex sm-pt10">
+                        <div class="de-flex-col">
+                            <div id="logo" class="w-150px">
+                                <a href="index.html#section-intro">
+                                    <h1>Rober Toro</h1>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="de-flex-col header-col-mid">
+                            <ul id="mainmenu">
+                                <li><a class="menu-item" href="index.html#section-intro">ホーム</a></li>
+                                <li><a class="menu-item" href="index.html#my_works">実績</a></li>
+                                <li><a class="menu-item" href="index.html#who_i_am">私について</a></li>
+                                <li><a class="menu-item" href="index.html#what_i_do">対応領域</a></li>
+                                <li><a class="menu-item" href="index.html#hire_me">お問い合わせ</a></li>
+                            </ul>
+                        </div>
+                        <div class="de-flex-col">
+                            <div class="menu_side_area">
+                                <a href="../yogibo.html" class="language-switch" data-language-switch="en" lang="en" hreflang="en" aria-label="View this page in English">EN</a>
+                                <a href="../assets/docs/rober-toro-cv.pdf" class="btn-main">履歴書をダウンロード</a>
+                                <!-- TODO: Add CV file at assets/docs/rober-toro-cv.pdf -->
+                                <span id="menu-btn"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div id="wrapper">
+        <div class="float-text show-on-scroll">
+            <span><a href="#">ページ上部へ</a></span>
+        </div>
+        <div class="scrollbar-v show-on-scroll"></div>
+
+        <div id="de-loader"></div>
+
+        <div class="no-bottom no-top" id="content">
+            <div id="top"></div>
+
+            <section id="section-intro" class="pb-40">
+                <div class="container">
+                    <div class="row g-4 align-items-center">
+                        <div class="col-lg-6">
+                            <div class="spacer-single"></div>
+                            <div class="subtitle s2 mb-3 wow fadeInUp" data-wow-delay=".2s">Yogibo Singapore</div>
+                            <h1 class="wow fadeInUp" data-wow-delay=".3s">フルスタック<br>EC運用責任</h1>
+                            <h4 class="mb-4 wow fadeInUp" data-wow-delay=".4s">複数メンバーの一人から、Shopify、Lazada、Shopeeを含むYogibo SingaporeのEC運用全体を担う唯一のデジタル責任者へ。</h4>
+                            <p class="wow fadeInUp" data-wow-delay=".5s">2年間で、共同担当者からYogibo Singaporeのデジタル運用全体を担う単独責任者へ。2市場のShopify、Lazada、ShopeeにおけるUX、フロントエンド、パフォーマンス、コンテンツ、チャネル横断運用を担当しました。</p>
+                            <div class="mb-4 wow fadeInUp" data-wow-delay="0.5s">
+                                <a href="https://yogibo.sg/" class="btn-main btn-line text-dark" target="_blank" rel="noopener noreferrer">yogibo.sgを見る</a>
+                            </div>
+                            <ul class="case-hero-tags wow fadeInUp" data-wow-delay="0.5s">
+                                <li>UX/UI</li>
+                                <li>Shopify</li>
+                                <li>フロントエンド</li>
+                                <li>CMS</li>
+                                <li>EC</li>
+                                <li>2023-Present</li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="crdi-yogibo-img-wrap case-img-hero wow fadeInUp" data-wow-delay="0.5s">
+                                <img src="../images/work-single/Yogibo/yogibo-hero.webp" class="w-100  crdi-yogibo-img-cover" alt="Yogibo Singaporeの店頭ディスプレイモックアップ、壁面装飾、キャンペーンアセット">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="no-top">
+                <div class="container">
+                    <div class="row g-4 wow fadeInUp" data-wow-delay=".3s">
+                        <div class="col-lg-6">
+                            <div class="hover relative overflow-hidden text-light crdi-yogibo-img-wrap case-img-compare">
+                                <a href="../images/work-single/Yogibo/yogibo-homepage-old.png" class="image-popup overflow-hidden relative case-img-link">
+                                    <img src="../images/work-single/Yogibo/yogibo-homepage-old.png" loading="lazy" class="w-100 hover-scale-1-2 img-gray crdi-yogibo-img-cover" alt="ストア改善前のYogibo Singaporeデスクトップホームページ">
+                                    <div class="absolute bottom-0 w-100 p-4 d-flex text-white justify-content-between case-gallery-caption">
+                                        <div class="case-figure-label">ビジュアルギャラリー</div>
+                                        <div class="fw-bold">改善前のホームページ</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="hover relative overflow-hidden text-light crdi-yogibo-img-wrap case-img-compare">
+                                <a href="../images/work-single/Yogibo/yogibo-homepage-new.png" class="image-popup overflow-hidden relative case-img-link">
+                                    <img src="../images/work-single/Yogibo/yogibo-homepage-new.png" loading="lazy" class="w-100 hover-scale-1-2 img-gray crdi-yogibo-img-cover" alt="ストア改善後のYogibo Singaporeデスクトップホームページ">
+                                    <div class="absolute bottom-0 w-100 p-4 d-flex text-white justify-content-between case-gallery-caption">
+                                        <div class="case-figure-label">ビジュアルギャラリー</div>
+                                        <div class="fw-bold">改善後のホームページ</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="no-top">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-10">
+                            <div class="subtitle wow fadeInUp" data-wow-delay=".2s">背景</div>
+                            <h2 class="wow fadeInUp" data-wow-delay=".3s">クライアント</h2>
+                            <p class="wow fadeInUp" data-wow-delay=".4s">Yogiboは、アジアをはじめ各地域の組織が独立して運営されるグローバルブランドです。Yogibo Singaporeは東南アジア拠点として、独自のローカル戦略と事業責任のもと、シンガポールとマレーシアのあらゆるデジタルチャネルを担当しています。</p>
+                            <p class="wow fadeInUp" data-wow-delay=".5s">デジタル上の存在そのものが店舗です。UXの性能、モバイル体験、コンテンツ品質、キャンペーン実行のすべてが、関心を注文へ変える力に直接影響します。</p>
+
+                            <hr class="mt-4 mb-4" style="border-color: rgba(0,0,0,.1); opacity:1;">
+
+                            <div class="row g-3 wow fadeInUp" data-wow-delay=".6s">
+                                <div class="col-6 col-md">
+                                    <div class="text-uppercase" style="font-size:11px;letter-spacing:.1em;opacity:.5;margin-bottom:.35rem;">役割</div>
+                                    <div style="font-size:14px;font-weight:600;line-height:1.4;">リードUI/UXデザイナー → デジタル運用の単独責任者</div>
+                                </div>
+                                <div class="col-6 col-md">
+                                    <div class="text-uppercase" style="font-size:11px;letter-spacing:.1em;opacity:.5;margin-bottom:.35rem;">担当範囲</div>
+                                    <div style="font-size:14px;font-weight:600;line-height:1.4;">Shopify、Lazada、Shopee — シンガポール・マレーシア向け全ECチャネル</div>
+                                </div>
+                                <div class="col-6 col-md">
+                                    <div class="text-uppercase" style="font-size:11px;letter-spacing:.1em;opacity:.5;margin-bottom:.35rem;">使用ツール</div>
+                                    <div style="font-size:14px;font-weight:600;line-height:1.4;">Liquid、HTML/CSS/JS、Figma、Clarity、GA、Adobe CC</div>
+                                </div>
+                                <div class="col-6 col-md">
+                                    <div class="text-uppercase" style="font-size:11px;letter-spacing:.1em;opacity:.5;margin-bottom:.35rem;">期間</div>
+                                    <div style="font-size:14px;font-weight:600;line-height:1.4;">2023年〜現在</div>
+                                </div>
+                                <div class="col-6 col-md">
+                                    <div class="text-uppercase" style="font-size:11px;letter-spacing:.1em;opacity:.5;margin-bottom:.35rem;">ステータス</div>
+                                    <div style="font-size:14px;font-weight:600;line-height:1.4;">運用中の商用プロジェクト</div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="no-top">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-10">
+                            <div class="case-dark-block p-5 wow fadeInUp" data-wow-delay=".3s">
+                                <div class="subtitle s2 mb-3">課題</div>
+                                <h2 class="text-light">グローバルブランドにおける地域デジタル運用</h2>
+                                <p class="mb-3">Yogiboはアジアをはじめ各地域の組織が独立して運営され、それぞれが市場に合わせた戦略と事業責任を持つグローバルブランドです。Yogibo Singaporeでは、Shopifyストア、Lazada、Shopeeを含むシンガポール・マレーシア市場のすべてのデジタル接点を管理します。</p>
+                                <p class="mb-3">デジタル上の判断はすべてこの役割を通ります。課題は実装だけではなく、実際の行動データで検証でき、事業成果につながるUI判断を行いながら、事業の成長に合わせて全チャネルのブランド表現を一貫させることです。</p>
+                                <p class="mb-0">一人でその水準を維持するには、アセットライブラリを整備し、判断を実装と同時に記録し、デザイン品質と事業成果の間に抜け漏れが生じないようにする必要があります。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="no-top section-dark bg-dark text-light">
+                <div class="container">
+                    <div class="row g-4">
+                        <div class="col-lg-12">
+                            <div class="subtitle wow fadeInUp" data-wow-delay=".2s">役割の変化</div>
+                            <h2 class="wow fadeInUp" data-wow-delay=".3s">役割の拡大</h2>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="case-timeline-item wow fadeInUp" data-wow-delay=".4s">
+                                <span class="case-timeline-dot"></span>
+                                <h4>2023年 — チームメンバーとして参画</h4>
+                                <p class="mb-0">CTIAを通じてYogibo Singaporeを支援する3名のデザイナーの一人として参画しました。当初はコンテンツ更新、ビジュアル制作、ページ単位のUI改善を担当しました。</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="case-timeline-item wow fadeInUp" data-wow-delay=".5s">
+                                <span class="case-timeline-dot"></span>
+                                <h4>2023〜2024年 — 担当範囲の拡大</h4>
+                                <p class="mb-0">ナビゲーション、モバイル購買フロー、パフォーマンスに関わる構造的な課題まで責任範囲を拡大。外部協力者とYogibo Singaporeチームの調整も直接担うようになりました。</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="case-timeline-item wow fadeInUp" data-wow-delay="0.5s">
+                                <span class="case-timeline-dot"></span>
+                                <h4>2025年 — デジタル運用の単独責任者</h4>
+                                <p class="mb-0">現在はShopifyストアを一貫して担当しています。UX判断、テーマのカスタマイズ、フロントエンド実装支援、CMS更新、パフォーマンス改善、キャンペーンビジュアル、日々の運用に加え、本番ストアの大規模な再構築と更新も行いました。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="no-top">
+                <div class="container">
+                    <div class="row g-4">
+                        <div class="col-lg-12">
+                            <div class="subtitle wow fadeInUp" data-wow-delay=".2s">主な担当領域</div>
+                            <h2 class="wow fadeInUp" data-wow-delay=".3s">実際に担当したこと</h2>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="hover relative overflow-hidden text-light crdi-yogibo-img-wrap case-img-standalone wow fadeInUp" data-wow-delay=".35s">
+                                <a href="../images/work-single/Yogibo/web-design-pages.png" class="image-popup overflow-hidden relative case-img-link">
+                                    <img src="../images/work-single/Yogibo/web-design-pages.png" loading="lazy" class="w-100 hover-scale-1-2 img-gray crdi-yogibo-img-cover" alt="Yogibo SingaporeのShopify開発とストアページデザイン例">
+                                    <div class="absolute bottom-0 w-100 p-4 case-gallery-caption">
+                                        <div class="case-figure-label text-white">Shopify開発、ページデザイン、サイト運用</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="case-area-card wow fadeInUp" data-wow-delay=".4s">
+                                <h4>Shopify UX・フロントエンド</h4>
+                                <p class="mb-0">Liquid、HTML、CSS、JavaScriptで高度にカスタマイズされたShopifyテーマを管理し、デザイン上の判断を直接本番環境へ反映しました。</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="case-area-card wow fadeInUp" data-wow-delay=".45s">
+                                <h4>モバイルUX最適化</h4>
+                                <p class="mb-0">モバイルナビゲーションと商品フローを確認し、課題が見られた箇所のレイアウト、タップ領域、商品詳細ページの使いやすさを改善しました。</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="case-area-card wow fadeInUp" data-wow-delay=".5s">
+                                <h4>パフォーマンス</h4>
+                                <p class="mb-0">画像最適化、遅延読み込み、アセット整理により表示負荷を軽減し、LCPを3.2秒から1.8秒へ改善しました。</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="case-area-card wow fadeInUp" data-wow-delay="0.5s">
+                                <h4>コンテンツ・CMS</h4>
+                                <p class="mb-0">ストアのコンテンツ、コレクションページ、プロモーション情報を継続的に更新し、常に販売に適した状態を保ちました。</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="case-area-card wow fadeInUp" data-wow-delay="0.5s">
+                                <h4>ビジュアル・キャンペーンアセット</h4>
+                                <p class="mb-0">ストアと各種デジタルチャネルで活用するプロモーショングラフィック、商品ビジュアル、キャンペーン用クリエイティブを制作しました。</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="case-area-card wow fadeInUp" data-wow-delay="0.5s">
+                                <h4>マーケットプレイス運用</h4>
+                                <p class="mb-0">Yogibo SingaporeのLazadaとShopeeで、商品コンテンツ、プロモーションアセット、チャネル更新を管理し、Shopifyストアとの最新性と一貫性を保ちました。</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="hover relative overflow-hidden text-light crdi-yogibo-img-wrap case-img-thumb wow fadeInUp" data-wow-delay="0.5s">
+                                <a href="../images/work-single/Yogibo/blog-old.png" class="image-popup overflow-hidden relative case-img-link">
+                                    <img src="../images/work-single/Yogibo/blog-old.png" loading="lazy" class="w-100 hover-scale-1-2 img-gray crdi-yogibo-img-cover" alt="改善前のYogibo Singaporeブログ・コンテンツページ">
+                                    <div class="absolute bottom-0 w-100 p-4 case-gallery-caption">
+                                        <div class="case-figure-label text-white">改善前のコンテンツページ</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="hover relative overflow-hidden text-light crdi-yogibo-img-wrap case-img-thumb wow fadeInUp" data-wow-delay="0.5s">
+                                <a href="../images/work-single/Yogibo/blog-new.png" class="image-popup overflow-hidden relative case-img-link">
+                                    <img src="../images/work-single/Yogibo/blog-new.png" loading="lazy" class="w-100 hover-scale-1-2 img-gray crdi-yogibo-img-cover" alt="改善後のYogibo Singaporeブログ・コンテンツページ">
+                                    <div class="absolute bottom-0 w-100 p-4 case-gallery-caption">
+                                        <div class="case-figure-label text-white">改善後のコンテンツページ</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="hover relative overflow-hidden text-light crdi-yogibo-img-wrap case-img-thumb wow fadeInUp" data-wow-delay="0.5s">
+                                <a href="../images/work-single/Yogibo/news-old.png" class="image-popup overflow-hidden relative case-img-link">
+                                    <img src="../images/work-single/Yogibo/news-old.png" loading="lazy" class="w-100 hover-scale-1-2 img-gray crdi-yogibo-img-cover" alt="改善前のYogibo Singaporeニュース・プロモーションコンテンツ">
+                                    <div class="absolute bottom-0 w-100 p-4 case-gallery-caption">
+                                        <div class="case-figure-label text-white">改善前のプロモーションコンテンツ</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="hover relative overflow-hidden text-light crdi-yogibo-img-wrap case-img-thumb wow fadeInUp" data-wow-delay="0.5s">
+                                <a href="../images/work-single/Yogibo/news-new.png" class="image-popup overflow-hidden relative case-img-link">
+                                    <img src="../images/work-single/Yogibo/news-new.png" loading="lazy" class="w-100 hover-scale-1-2 img-gray crdi-yogibo-img-cover" alt="改善後のYogibo Singaporeニュース・プロモーションコンテンツ">
+                                    <div class="absolute bottom-0 w-100 p-4 case-gallery-caption">
+                                        <div class="case-figure-label text-white">改善後のプロモーションコンテンツ</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="no-top section-dark bg-dark text-light">
+                <div class="container">
+                    <div class="row g-4 align-items-center">
+                        <div class="col-lg-6">
+                            <div class="subtitle wow fadeInUp" data-wow-delay=".2s">主なUX改善</div>
+                            <h2 class="wow fadeInUp" data-wow-delay=".3s">判断の方法</h2>
+                            <p class="wow fadeInUp" data-wow-delay=".4s">専任のリサーチチームがないため、Microsoft ClarityとGoogle Analyticsのヒートマップ、セッション録画、本番ストアの行動パターンを判断材料として活用しました。</p>
+                            <p class="wow fadeInUp" data-wow-delay=".5s">実際のユーザー行動からナビゲーションの弱点、モバイル商品詳細ページの摩擦、コンテンツ不足を見つけ、Shopifyテーマへ直接改善を実装し、その反応を確認しました。</p>
+                            <ul class="case-proof-list wow fadeInUp" data-wow-delay="0.5s">
+                                <li>観察</li>
+                                <li>判断</li>
+                                <li>実装</li>
+                                <li>本番環境で検証</li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="hover relative overflow-hidden text-light wow fadeInUp crdi-yogibo-img-wrap case-img-side" data-wow-delay="0.5s">
+                                <a href="../images/work-single/Yogibo/Yogibo-Site- Map-New.jpg" class="image-popup overflow-hidden relative case-img-link">
+                                    <img src="../images/work-single/Yogibo/Yogibo-Site- Map-New.jpg" loading="lazy" class="w-100 img-gray crdi-yogibo-img-cover" alt="Yogibo Singaporeのデスクトップサイトマップとナビゲーション設計">
+                                    <div class="absolute bottom-0 w-100 p-4 case-gallery-caption">
+                                        <div class="case-figure-label text-white">ナビゲーション構造とストア設計</div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="hover relative overflow-hidden text-light wow fadeInUp crdi-yogibo-img-wrap case-img-supporting mt-4" data-wow-delay="0.5s">
+                                <a href="../images/work-single/Yogibo/Clarity_Yogibo_Singapore.png" class="image-popup overflow-hidden relative case-img-link">
+                                    <img src="../images/work-single/Yogibo/Clarity_Yogibo_Singapore.png" loading="lazy" class="w-100 img-gray crdi-yogibo-img-cover" alt="Yogibo SingaporeストアのMicrosoft Clarity行動データ">
+                                    <div class="absolute bottom-0 w-100 p-4 case-gallery-caption">
+                                        <div class="case-figure-label text-white">Microsoft Clarityによる実際の行動データ</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row g-4 mt-1">
+                        <div class="col-lg-4">
+                            <div class="hover relative overflow-hidden text-light wow fadeInUp crdi-yogibo-img-wrap case-img-thumb" data-wow-delay="0.5s">
+                                <a href="../images/work-single/Yogibo/Yogibo-Site- Map-Old.jpg" class="image-popup overflow-hidden relative case-img-link">
+                                    <img src="../images/work-single/Yogibo/Yogibo-Site- Map-Old.jpg" loading="lazy" class="w-100 img-gray crdi-yogibo-img-cover" alt="改善前のYogibo Singaporeサイトマップ構造">
+                                    <div class="absolute bottom-0 w-100 p-4 case-gallery-caption">
+                                        <div class="case-figure-label text-white">改善前のサイト構造</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="hover relative overflow-hidden text-light wow fadeInUp crdi-yogibo-img-wrap case-img-thumb" data-wow-delay="0.5s">
+                                <a href="../images/work-single/Yogibo/yogibo-navigation-old.png" class="image-popup overflow-hidden relative case-img-link">
+                                    <img src="../images/work-single/Yogibo/yogibo-navigation-old.png" loading="lazy" class="w-100 img-gray crdi-yogibo-img-cover" alt="改善前のYogibo Singaporeナビゲーション構造">
+                                    <div class="absolute bottom-0 w-100 p-4 case-gallery-caption">
+                                        <div class="case-figure-label text-white">改善前のナビゲーション</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="hover relative overflow-hidden text-light wow fadeInUp crdi-yogibo-img-wrap case-img-thumb" data-wow-delay="0.5s">
+                                <a href="../images/work-single/Yogibo/yogibo-navigation-new.png" class="image-popup overflow-hidden relative case-img-link">
+                                    <img src="../images/work-single/Yogibo/yogibo-navigation-new.png" loading="lazy" class="w-100 img-gray crdi-yogibo-img-cover" alt="改善後のYogibo Singaporeナビゲーション構造">
+                                    <div class="absolute bottom-0 w-100 p-4 case-gallery-caption">
+                                        <div class="case-figure-label text-white">改善後のナビゲーション</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row g-4 mt-1">
+                        <div class="col-lg-12">
+                            <div class="hover relative overflow-hidden text-light wow fadeInUp crdi-yogibo-img-wrap case-img-supporting" data-wow-delay="0.5s">
+                                <a href="../images/work-single/Yogibo/Clarity_Yogibo_Singapore_Attention.png" class="image-popup overflow-hidden relative case-img-link">
+                                    <img src="../images/work-single/Yogibo/Clarity_Yogibo_Singapore_Attention.png" loading="lazy" class="w-100 img-gray crdi-yogibo-img-cover" alt="Yogibo Singaporeストア分析に使用したMicrosoft Clarityの注目度データ">
+                                    <div class="absolute bottom-0 w-100 p-4 case-gallery-caption">
+                                        <div class="case-figure-label text-white">Microsoft Clarityの注目度データ</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="no-top">
+                <div class="container">
+                    <div class="row g-4 align-items-center">
+                        <div class="col-lg-6">
+                            <div class="crdi-yogibo-img-wrap case-img-natural wow fadeInUp" data-wow-delay=".4s">
+                                <img src="../images/work-single/Yogibo/brand-banners.png" loading="lazy" class="w-100 img-gray crdi-yogibo-img-cover" alt="Yogibo Singaporeのチャネル横断キャンペーン用ブランドバナー">
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="subtitle wow fadeInUp" data-wow-delay=".2s">チャネル横断の運用責任</div>
+                            <h2 class="wow fadeInUp" data-wow-delay=".3s">ストアの外まで</h2>
+                            <p class="wow fadeInUp" data-wow-delay=".4s">Shopifyストアが中心でしたが、担当範囲はそれだけではありません。事業の必要に応じて、キャンペーンアセット、商品コンテンツ、プロモーション更新、地域チャネルの支援も担いました。</p>
+                            <p class="wow fadeInUp" data-wow-delay=".5s">Shopifyストア内に限らず、デザイン、コンテンツ、実装を横断して、稼働中の商用ブランドの一貫性を保つことが求められました。</p>
+                        </div>
+                    </div>
+                    <div class="row g-4 mt-1">
+                        <div class="col-lg-4">
+                            <div class="hover relative overflow-hidden text-light crdi-yogibo-img-wrap case-img-thumb wow fadeInUp" data-wow-delay="0.5s">
+                                <a href="../images/work-single/Yogibo/brand-banners2.png" class="image-popup overflow-hidden relative case-img-link">
+                                    <img src="../images/work-single/Yogibo/brand-banners2.png" loading="lazy" class="w-100 hover-scale-1-2 img-gray crdi-yogibo-img-cover" alt="Yogibo Singaporeの追加デジタルバナー">
+                                    <div class="absolute bottom-0 w-100 p-4 case-gallery-caption">
+                                        <div class="case-figure-label text-white">デジタルバナーシステム</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="hover relative overflow-hidden text-light crdi-yogibo-img-wrap case-img-thumb wow fadeInUp" data-wow-delay="0.5s">
+                                <a href="../images/work-single/Yogibo/SNS.png" class="image-popup overflow-hidden relative case-img-link">
+                                    <img src="../images/work-single/Yogibo/SNS.png" loading="lazy" class="w-100 hover-scale-1-2 img-gray crdi-yogibo-img-cover" alt="Yogibo SingaporeのSNSクリエイティブ例">
+                                    <div class="absolute bottom-0 w-100 p-4 case-gallery-caption">
+                                        <div class="case-figure-label text-white">SNSクリエイティブ支援</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="hover relative overflow-hidden text-light crdi-yogibo-img-wrap case-img-thumb wow fadeInUp" data-wow-delay="0.5s">
+                                <a href="../images/work-single/Yogibo/brand-posters-prints.png" class="image-popup overflow-hidden relative case-img-link">
+                                    <img src="../images/work-single/Yogibo/brand-posters-prints.png" loading="lazy" class="w-100 hover-scale-1-2 img-gray crdi-yogibo-img-cover" alt="Yogibo Singaporeのポスター・印刷物例">
+                                    <div class="absolute bottom-0 w-100 p-4 case-gallery-caption">
+                                        <div class="case-figure-label text-white">ポスター・印刷物</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="no-top section-dark bg-dark text-light">
+                <div class="container">
+                    <div class="row g-4">
+                        <div class="col-lg-12">
+                            <div class="subtitle wow fadeInUp" data-wow-delay=".2s">成果</div>
+                            <h2 class="wow fadeInUp" data-wow-delay=".3s">変化したこと</h2>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="case-stat-card wow fadeInUp" data-wow-delay=".4s">
+                                <div class="case-stat-number">3.2s to 1.8s</div>
+                                <h4>Largest Contentful Paint</h4>
+                                <p class="mb-0">画像やアセットの最適化など実践的なストア改善により、LCPを3.2秒から1.8秒へ短縮しました。</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="case-stat-card wow fadeInUp" data-wow-delay=".5s">
+                                <div class="case-stat-number">+15-22%</div>
+                                <h4>注文数の増加</h4>
+                                <p class="mb-0">UX改善、モバイル最適化、コンテンツ更新、ストアのパフォーマンス施策により、期間中の注文数が15〜22%増加しました。</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="hover relative overflow-hidden text-light crdi-yogibo-img-wrap case-img-supporting wow fadeInUp" data-wow-delay="0.5s">
+                                <a href="../images/work-single/Yogibo/Impact1.png" class="image-popup overflow-hidden relative case-img-link">
+                                    <img src="../images/work-single/Yogibo/Impact1.png" loading="lazy" class="w-100 img-gray crdi-yogibo-img-cover" alt="Yogibo Singaporeのコンバージョン率分析データ">
+                                    <div class="absolute bottom-0 w-100 p-4 case-gallery-caption">
+                                        <div class="case-figure-label text-white">コンバージョンデータ</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="hover relative overflow-hidden text-light crdi-yogibo-img-wrap case-img-supporting wow fadeInUp" data-wow-delay="0.5s">
+                                <a href="../images/work-single/Yogibo/Impact2.png" class="image-popup overflow-hidden relative case-img-link">
+                                    <img src="../images/work-single/Yogibo/Impact2.png" loading="lazy" class="w-100 img-gray crdi-yogibo-img-cover" alt="Yogibo Singaporeのカート・注文分析データ">
+                                    <div class="absolute bottom-0 w-100 p-4 case-gallery-caption">
+                                        <div class="case-figure-label text-white">カート・注文データ</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="hover relative overflow-hidden text-light crdi-yogibo-img-wrap case-img-supporting wow fadeInUp" data-wow-delay="0.5s">
+                                <a href="../images/work-single/Yogibo/Impact3.png" class="image-popup overflow-hidden relative case-img-link">
+                                    <img src="../images/work-single/Yogibo/Impact3.png" loading="lazy" class="w-100 img-gray crdi-yogibo-img-cover" alt="Yogibo Singaporeのパフォーマンス・事業分析データ">
+                                    <div class="absolute bottom-0 w-100 p-4 case-gallery-caption">
+                                        <div class="case-figure-label text-white">パフォーマンスデータ</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="no-top">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-10">
+                            <div class="subtitle wow fadeInUp" data-wow-delay=".2s">学び</div>
+                            <h2 class="wow fadeInUp" data-wow-delay=".3s">この仕事が示すこと</h2>
+                            <p class="wow fadeInUp" data-wow-delay=".4s">正式な引き継ぎ体制がない中で、稼働中のECストアのデジタル領域を一人で運用するには、通常とは異なるデザイン責任が必要です。実際の行動から問題を見つけ、素早く判断し、その判断を本番環境で継続して検証する仕事でした。</p>
+                            <div class="row g-4 mt-2">
+                                <div class="col-md-6">
+                                    <div class="case-note-card wow fadeInUp" data-wow-delay=".5s">
+                                        <h4>UXの知見を適用</h4>
+                                        <p class="mb-0">仮説上のフローではなく、実際の購買行動に基づいて判断するため、Clarityと分析データを活用しました。</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="case-note-card wow fadeInUp" data-wow-delay="0.5s">
+                                        <h4>実装力</h4>
+                                        <p class="mb-0">デザイン成果物だけで終わらず、Shopify Liquid、HTML、CSS、JavaScriptで直接実装しました。</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="case-note-card wow fadeInUp" data-wow-delay="0.5s">
+                                        <h4>商用プロダクトへの責任</h4>
+                                        <p class="mb-0">売上を生む稼働中のストアで、実際の事業制約、継続的な更新、本番成果に向き合いました。</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="case-note-card wow fadeInUp" data-wow-delay="0.5s">
+                                        <h4>時間をかけて築いた信頼</h4>
+                                        <p class="mb-0">複数の担当者の一人から、Yogibo Singaporeのデジタル体験に単独で責任を持つ役割へ成長しました。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="no-top">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-10">
+                            <div class="case-dark-block p-5 wow fadeInUp" data-wow-delay=".3s">
+                                <div class="subtitle s2 mb-3">振り返り</div>
+                                <h2 class="text-light">次に改善したいこと</h2>
+                                <p class="mb-0">少人数運用では判断がすぐに本番へ反映されます。次に取り組むなら、ポートフォリオ作成時の後付けではなく、意思決定プロセスの一部として最初からドキュメント化を組み込みます。現在はその運用を始めています。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="case-contact">
+                <div class="container">
+                    <div class="row g-4 justify-content-center">
+                        <div class="col-lg-6 text-center">
+                            <h2>お問い合わせ</h2>
+                        </div>
+                        <div class="col-lg-8 text-center wow fadeInUp" data-wow-delay=".3s">
+                            <p>デザイン、実装、成果までデジタルプロダクトを一貫して担える人材をお探しでしたら、ぜひお話しさせてください。</p>
+                            <div class="d-flex justify-content-center flex-wrap gap-3">
+                                <a href="mailto:rober24.95@gmail.com" class="btn-main">メール</a>
+                                <a href="https://www.linkedin.com/in/rober-toro-802953189/" class="btn-main btn-line text-dark">LinkedIn</a>
+                                <a href="../assets/docs/rober-toro-cv.pdf" class="btn-main btn-line text-dark">履歴書をダウンロード</a>
+                            </div>
+                            <!-- TODO: Add CV file at assets/docs/rober-toro-cv.pdf -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-dark-1 text-dark no-top no-bottom">
+                <div class="wow fadeInRight d-flex">
+                    <div class="de-marquee-list wow">
+                        <div class="d-item">
+                            <span class="d-item-txt">Shopify UX</span>
+                            <span class="d-item-circle"></span>
+                            <span class="d-item-txt">フロントエンド支援</span>
+                            <span class="d-item-circle"></span>
+                            <span class="d-item-txt">モバイル最適化</span>
+                            <span class="d-item-circle"></span>
+                            <span class="d-item-txt">パフォーマンス</span>
+                            <span class="d-item-circle"></span>
+                            <span class="d-item-txt">CMSコンテンツ</span>
+                            <span class="d-item-circle"></span>
+                            <span class="d-item-txt">キャンペーンアセット</span>
+                            <span class="d-item-circle"></span>
+                            <span class="d-item-txt">マーケットプレイス運用</span>
+                            <span class="d-item-circle"></span>
+                            <span class="d-item-txt">商用プロダクトへの責任</span>
+                            <span class="d-item-circle"></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer>
+            <div class="container-fluid">
+                <div class="px-2">
+                    <div class="row g-4 justify-content-center">
+                        <div class="col-lg-6 text-center">
+                            <div class="d-menu-1 wow" data-wow-delay=".3s">
+                                <ul>
+                                    <li><a href="mailto:rober24.95@gmail.com">メール</a></li>
+                                    <li><a href="https://www.linkedin.com/in/rober-toro-802953189/">LinkedIn</a></li>
+                                    <li><a href="../assets/docs/rober-toro-cv.pdf">履歴書</a></li>
+                                </ul>
+
+                                <p class="no-bottom">© 2026 Rober Toro. カスタマイズした静的HTMLテンプレートで制作したポートフォリオです。<br>テンプレートベース：Designesia。</p>
+                                <!-- TODO: Add CV file at assets/docs/rober-toro-cv.pdf -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../js/plugins.js"></script>
+    <script src="../js/designesia.js"></script>
+    <script src="../js/custom-marquee.js"></script>
+</body>
+
+</html>

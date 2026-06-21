@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <title>ROBODACHI / Planet of Robots — Rober Toro</title>
+    <link rel="icon" href="../images/icon.webp" type="image/gif" sizes="16x16">
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="description" content="Rober ToroによるROBODACHI / Planet of Robotsのケーススタディ。0→1のモバイルプロダクト構想、ゲームUXシステム、ビジュアルIP、プロダクトストーリーテリングを紹介します。">
+    <meta content="" name="keywords">
+    <meta content="Rober Toro" name="author">
+    <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap">
+    <link href="../css/plugins.css" rel="stylesheet" type="text/css">
+    <link href="../css/style.css" rel="stylesheet" type="text/css">
+    <link href="../css/coloring.css" rel="stylesheet" type="text/css">
+    <link id="colors" href="../css/colors/scheme-01.css" rel="stylesheet" type="text/css">
+    <link href="../css/09_custom.css" rel="stylesheet" type="text/css">
+    <link rel="alternate" hreflang="en" href="../robodachi.html">
+    <link rel="alternate" hreflang="ja" href="robodachi.html">
+    <script src="../js/language-router.js"></script>
+</head>
+
+<body>
+    <header class="header-light transparent has-topbar">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="de-flex sm-pt10">
+                        <div class="de-flex-col">
+                            <div id="logo" class="w-150px">
+                                <a href="index.html#section-intro">
+                                    <h1>Rober Toro</h1>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="de-flex-col header-col-mid">
+                            <ul id="mainmenu">
+                                <li><a class="menu-item" href="index.html#section-intro">ホーム</a></li>
+                                <li><a class="menu-item" href="index.html#my_works">実績</a></li>
+                                <li><a class="menu-item" href="index.html#who_i_am">私について</a></li>
+                                <li><a class="menu-item" href="index.html#what_i_do">対応領域</a></li>
+                                <li><a class="menu-item" href="index.html#hire_me">お問い合わせ</a></li>
+                            </ul>
+                        </div>
+                        <div class="de-flex-col">
+                            <div class="menu_side_area">
+                                <a href="../robodachi.html" class="language-switch" data-language-switch="en" lang="en" hreflang="en" aria-label="View this page in English">EN</a>
+                                <a href="../assets/docs/rober-toro-cv.pdf" class="btn-main">履歴書をダウンロード</a>
+                                <span id="menu-btn"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div id="wrapper">
+        <div class="float-text show-on-scroll">
+            <span><a href="#">ページ上部へ</a></span>
+        </div>
+        <div class="scrollbar-v show-on-scroll"></div>
+        <div id="de-loader"></div>
+
+        <div class="no-bottom no-top" id="content">
+            <div id="top"></div>
+
+            <main class="robodachi-case">
+                <section id="section-intro" class="case-hero">
+                    <div class="container">
+                        <div class="case-hero-copy text-center">
+                            <p class="case-eyebrow">モバイルプロダクト構想・ゲームUX・ビジュアルシステム</p>
+                            <h1 class="wow fadeIn case-title-centered" data-wow-delay=".3s">ROBODACHI / Planet of Robots</h1>
+                            <p class="case-lede">初期のROBODACHIプロトタイプから発展した歩数連動型モバイルRPG構想。現実世界の歩行が探索、資源収集、キャラクター成長、長期的な進行を動かす、より広い世界を設計しました。</p>
+                        </div>
+
+                        <figure class="case-visual case-hero-visual wow fadeInUp" data-wow-delay=".45s">
+                            <a href="../images/work-single/robodachi-PoR/hero-PoR.png" class="image-popup">
+                                <img src="../images/work-single/robodachi-PoR/hero-PoR.png" alt="ROBODACHI歩数連動RPGのヒーロービジュアル">
+                            </a>
+                        </figure>
+
+                        <div class="case-copy case-intro-copy">
+                            <p>モバイルRPGの構想をゼロから定義し、UXシステムを構築し、それを支えるビジュアルIPを制作した0→1のプロダクトデザインプロジェクトです。</p>
+                        </div>
+
+                        <div class="case-meta">
+                            <div><span>役割</span>プロダクトデザイナー・UXシステムデザイナー・ビジュアルデザイナー（単独担当）</div>
+                            <div><span>期間</span>2023.08-2024.02</div>
+                            <div><span>担当範囲</span>モバイルゲームUX・プロダクトシステム設計・GameFi体験・キャラクターIP</div>
+                            <div><span>ステータス</span>社内構想・開発前デザイン</div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="case-block">
+                    <div class="container">
+                        <figure class="case-visual">
+                            <a href="../images/work-single/robodachi-PoR/Problem - Complexity.jpg" class="image-popup">
+                                <img src="../images/work-single/robodachi-PoR/Problem - Complexity.jpg" alt="ROBODACHIのデザイン課題とプロダクトの複雑さを示す図">
+                            </a>
+                        </figure>
+                        <div class="case-copy">
+                            <p class="case-eyebrow">デザイン課題</p>
+                            <h2>歩くことを長期的なエンゲージメントへ。</h2>
+                            <p>多くの歩行報酬型プロダクトは「歩く → 報酬 → 終了」で完結し、取引的な体験になりがちです。また、多くのGameFiは収益性を重視する一方、感情的な愛着、長期的な成長、カジュアルユーザーにも親しみやすいゲーム性が不足しています。</p>
+                            <p>従来型ゲームのユーザーとブロックチェーンに関心を持つユーザーの両方を支えながら、中心となる体験を複雑にしないモバイル設計が課題でした。</p>
+                            <p class="case-question">歩行を一度きりの報酬メカニズムではなく、長く楽しめる体験に変えるにはどうすればよいか。</p>
+                            <ul>
+                                <li>現実世界の移動が、探索、資源、アップグレードにつながる設計。</li>
+                                <li>カジュアルユーザーは、ゲームを楽しむためにブロックチェーンやトークンを理解する必要がありません。</li>
+                                <li>アップグレード、発見、交流、装備、世界の拡張を通じて、繰り返し戻りたくなる理由を提供する必要があります。</li>
+                                <li>初期のNFT保有者には、完成版ゲームを待つ間に利用できる軽量なインタラクティブ体験が必要でした。</li>
+                                <li>IPとして拡張可能なキャラクターシステム。</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="case-block">
+                    <div class="container">
+                        <figure class="case-visual">
+                            <a href="../images/work-single/robodachi-PoR/Solution - Incentive Flow.jpg" class="image-popup">
+                                <img src="../images/work-single/robodachi-PoR/Solution - Incentive Flow.jpg" alt="ROBODACHIのプレイヤー動機戦略を示す図">
+                            </a>
+                        </figure>
+                        <div class="case-copy">
+                            <p class="case-eyebrow">ユーザーの動機</p>
+                            <h2>カジュアルプレイヤーと高度な経済圏ユーザーの双方に向けた設計。</h2>
+                            <p>ユーザーは異なる動機でプロダクトに参加します。カジュアルユーザーには遊び、交流、強化、発見を提供し、上級ユーザーはNFT、マーケットプレイス、所有システムへアクセスできます。</p>
+                            <p>カジュアルなゲームループはシンプルに保ち、より高度な経済システムを中心体験の外側に置くUX戦略を採用しました。</p>
+                            <p class="case-note">まずカジュアルな遊び、その先に高度な経済圏。</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="case-block">
+                    <div class="container">
+                        <figure class="case-visual">
+                            <a href="../images/work-single/robodachi-PoR/PoR_Exploration_Adventure_Flowchart.jpg" class="image-popup">
+                                <img src="../images/work-single/robodachi-PoR/PoR_Exploration_Adventure_Flowchart.jpg" alt="歩数連動RPGループを示すROBODACHI探索フローチャート">
+                            </a>
+                        </figure>
+                        <div class="case-copy">
+                            <p class="case-eyebrow">プロダクトの解決策</p>
+                            <h2>歩行をRPGの成長エネルギーに。</h2>
+                            <p>現実世界の移動を、ゲーム内の探索、資源収集、装備発見、キャラクター成長の入力とする、歩数連動型RPGの成長ループを設計しました。</p>
+                            <p class="case-loop">歩く → 探索する → 資源を集める → ROBODACHIを強化する → 新しい行動を解放する → また歩く</p>
+                            <p>単純な報酬で終わらず、歩行がより大きな成長システムを動かし、ユーザーが戻る理由を生みます。</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="case-block prototype-evolution">
+                    <div class="container">
+                        <div class="case-copy">
+                            <p class="case-eyebrow">プロトタイプの進化</p>
+                            <h2>ROBODACHIの集中型プロトタイプから、より広いPlanet of Robots体験へ。</h2>
+                            <p>最初のプロトタイプは、プロジェクトが主にROBODACHIとして構想されていた段階で制作しました。基本的な移動ループ、軽量な成長、初期のモバイル操作、現実世界の移動で動くロボットコンパニオンという体験価値の検証に注力しました。</p>
+                            <p>構想の成熟に伴い、より豊かな環境、強固な成長ロジック、拡張可能な物語を備えた2.5D世界「Planet of Robots」へ発展しました。</p>
+                        </div>
+
+                        <div class="prototype-stage">
+                            <div class="mobile-screen-grid">
+                                <a href="../images/work-single/robodachi-PoR/1st-prototype-1.png" class="image-popup case-thumb"><img src="../images/work-single/robodachi-PoR/1st-prototype-1.png" alt="ROBODACHI初期プロトタイプの探索フロー画面"></a>
+                                <a href="../images/work-single/robodachi-PoR/1st-prototype-2.png" class="image-popup case-thumb"><img src="../images/work-single/robodachi-PoR/1st-prototype-2.png" alt="ROBODACHI初期プロトタイプのタスクフロー画面"></a>
+                                <a href="../images/work-single/robodachi-PoR/1st-prototype-3.png" class="image-popup case-thumb"><img src="../images/work-single/robodachi-PoR/1st-prototype-3.png" alt="ROBODACHI初期プロトタイプの報酬操作画面"></a>
+                                <a href="../images/work-single/robodachi-PoR/1st-prototype-4.png" class="image-popup case-thumb"><img src="../images/work-single/robodachi-PoR/1st-prototype-4.png" alt="ROBODACHI初期プロトタイプのキャラクター交流画面"></a>
+                                <a href="../images/work-single/robodachi-PoR/1st-prototype-5.png" class="image-popup case-thumb"><img src="../images/work-single/robodachi-PoR/1st-prototype-5.png" alt="ROBODACHI初期プロトタイプの進行状態画面"></a>
+                                <a href="../images/work-single/robodachi-PoR/1st-prototype-8.png" class="image-popup case-thumb"><img src="../images/work-single/robodachi-PoR/1st-prototype-8.png" alt="ROBODACHI初期プロトタイプの完了状態画面"></a>
+                                <a href="../images/work-single/robodachi-PoR/1st-prototype-9.png" class="image-popup case-thumb"><img src="../images/work-single/robodachi-PoR/1st-prototype-9.png" alt="ROBODACHI初期プロトタイプのシステム状態画面"></a>
+                            </div>
+                            <video class="case-video case-phone-video" controls muted playsinline preload="metadata" poster="images/work-single/robodachi-PoR/robodachi-first-prototype-vid-mobile-still-frame.png">
+                                <source src="../images/work-single/robodachi-PoR/robodachi-first-prototype-vid-mobile.mp4" type="video/mp4">
+                            </video>
+                            <div class="case-copy">
+                                <h3>初期プロトタイプ — 基本移動ループ</h3>
+                                <p>初期プロトタイプでは、基本移動ループ、主要画面フロー、ROBODACHIとの交流による感情的な基盤を検証しました。</p>
+                            </div>
+                        </div>
+
+                        <div class="prototype-stage">
+                            <div class="mobile-screen-grid">
+                                <a href="../images/work-single/robodachi-PoR/PoR-Game/PoR-Game-UI-Prototype-World.png" class="image-popup case-thumb"><img src="../images/work-single/robodachi-PoR/PoR-Game/PoR-Game-UI-Prototype-World.png" alt="Planet of Robots発展版プロトタイプのワールド画面"></a>
+                                <a href="../images/work-single/robodachi-PoR/PoR-Game/PoR-Game-UI-Prototype-Character-1.png" class="image-popup case-thumb"><img src="../images/work-single/robodachi-PoR/PoR-Game/PoR-Game-UI-Prototype-Character-1.png" alt="Planet of Robots発展版プロトタイプのキャラクター画面"></a>
+                                <a href="../images/work-single/robodachi-PoR/PoR-Game/PoR-Game-UI-Prototype-Character-customization.png" class="image-popup case-thumb"><img src="../images/work-single/robodachi-PoR/PoR-Game/PoR-Game-UI-Prototype-Character-customization.png" alt="Planet of Robots発展版プロトタイプのキャラクターカスタマイズ画面"></a>
+                                <a href="../images/work-single/robodachi-PoR/PoR-Game/PoR-Game-UI-Prototype-Gear-detailed-page.png" class="image-popup case-thumb"><img src="../images/work-single/robodachi-PoR/PoR-Game/PoR-Game-UI-Prototype-Gear-detailed-page.png" alt="Planet of Robots発展版プロトタイプの装備詳細画面"></a>
+                                <a href="../images/work-single/robodachi-PoR/PoR-Game/PoR-Game-UI-Prototype-Gear-sales-pop-up.png" class="image-popup case-thumb"><img src="../images/work-single/robodachi-PoR/PoR-Game/PoR-Game-UI-Prototype-Gear-sales-pop-up.png" alt="Planet of Robots発展版プロトタイプの装備販売ポップアップ"></a>
+                            </div>
+                            <div class="case-copy">
+                                <h3>PoRプロトタイプ — より広い世界観</h3>
+                                <p>後期のPoRプロトタイプでは、モバイルフローを世界探索、ビジュアルアイデンティティ、より広いゲームプレイ構想と結びつけ、体験を豊かな世界構造へ拡張しました。</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="case-block">
+                    <div class="container">
+                        <div class="case-visual-grid">
+                            <a href="../images/work-single/robodachi-PoR/Early System Relationship Map.png" class="image-popup"><img src="../images/work-single/robodachi-PoR/Early System Relationship Map.png" alt="ROBODACHI初期システムの関係図"></a>
+                            <a href="../images/work-single/robodachi-PoR/Core Gameplay Architecture.jpg" class="image-popup"><img src="../images/work-single/robodachi-PoR/Core Gameplay Architecture.jpg" alt="ROBODACHIの主要ゲームプレイ・アーキテクチャ図"></a>
+                            <a href="../images/work-single/robodachi-PoR/Original Core System Map.png" class="image-popup"><img src="../images/work-single/robodachi-PoR/Original Core System Map.png" alt="ROBODACHIの原型となる主要システムマップ"></a>
+                        </div>
+                        <div class="case-copy">
+                            <p class="case-eyebrow">システムアーキテクチャ</p>
+                            <h2>移動、ゲームプレイ、経済レイヤーの構造化。</h2>
+                            <p>主要な成長ループを定義した後、探索、資源収集、精製、キャラクター強化、土地拡張、所有メカニズムが体験全体でどうつながるかを把握するため、プロダクトのシステムアーキテクチャを整理しました。</p>
+                            <ul>
+                                <li>移動レイヤー — 現実世界の歩行と距離計測</li>
+                                <li>ゲームレイヤー — ROBODACHIの成長、探索、街づくり、素材、交流</li>
+                                <li>経済レイヤー — マーケットプレイス、トークンフロー、NFTアセット、アイテム交換</li>
+                            </ul>
+                            <p class="case-loop">移動 → 収集 → 加工 → 建築 → 強化 → 修理 → 取引 → 拡張</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="case-block">
+                    <div class="container">
+                        <figure class="case-visual">
+                            <a href="../images/work-single/robodachi-PoR/Core Activity User Flow.png" class="image-popup">
+                                <img src="../images/work-single/robodachi-PoR/Core Activity User Flow.png" alt="ROBODACHIの主要アクティビティ・ユーザーフロー">
+                            </a>
+                        </figure>
+                        <div class="case-visual-grid">
+                            <a href="../images/work-single/robodachi-PoR/mobile game ui.png" class="image-popup"><img src="../images/work-single/robodachi-PoR/mobile game ui.png" alt="ROBODACHIモバイルゲームUI画面一式"></a>
+                        </div>
+                        <div class="case-copy">
+                            <p class="case-eyebrow">UXフロー</p>
+                            <h2>システムロジックを、毎日繰り返し使えるモバイルフローへ。</h2>
+                            <p>ゲームを開いてからタスクを完了し、報酬を受け取るまでの主要アクティビティフローを設計しました。これにより、基本経路、例外、クールダウン、未完了状態、日々繰り返す利用ループを明確にしました。</p>
+                            <ul>
+                                <li>マップベースの探索開始</li>
+                                <li>アクティビティ前のROBODACHI選択</li>
+                                <li>探索進行と報酬獲得</li>
+                                <li>デイリータスクのチェックリスト</li>
+                                <li>装備、修理、保管、レベルアップのフロー</li>
+                                <li>交流とやさしいインタラクション</li>
+                            </ul>
+                            <p>一連の画面は、成長、分かりやすさ、キャラクターへの愛着を両立するモバイル体験へ、システムロジックを落とし込んだ過程を示しています。</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="case-block">
+                    <div class="container">
+                        <div class="case-split-note">
+                            <div>
+                                <h3>ゲーム内経済</h3>
+                                <ul>
+                                    <li>資源</li>
+                                    <li>アイテム</li>
+                                    <li>アップグレード</li>
+                                    <li>交流</li>
+                                    <li>ゲームプレイ報酬</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3>外部Web3経済圏</h3>
+                                <ul>
+                                    <li>NFTアセット</li>
+                                    <li>マーケットプレイス</li>
+                                    <li>トークン関連操作</li>
+                                    <li>外部所有</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="case-copy">
+                            <p class="case-eyebrow">プラットフォーム上の制約</p>
+                            <h2>カジュアルゲームとWeb3経済圏を分離。</h2>
+                            <p>モバイルアプリストアではブロックチェーン取引が制限されるため、体験をカジュアルユーザー向けのゲーム内経済と、上級ユーザー向けの外部Web3経済圏の二層に分けました。</p>
+                            <p>カジュアルユーザーにウォレット、トークン、マーケットプレイスの仕組みを理解させることなく、ブロックチェーン層を機能させることを目指しました。</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="case-block">
+                    <div class="container">
+                        <div class="case-gallery">
+                            <a href="../images/work-single/robodachi-PoR/robodachi-charcter-design.png" class="image-popup"><img src="../images/work-single/robodachi-PoR/robodachi-charcter-design.png" alt="ROBODACHIのモジュール式キャラクターユニット"></a>
+                            <a href="../images/work-single/robodachi-PoR/Gear ROBODACHI Up Character Customization System.png" class="image-popup"><img src="../images/work-single/robodachi-PoR/Gear ROBODACHI Up Character Customization System.png" alt="ROBODACHIのキャラクターカスタマイズ・装備システム"></a>
+                            <a href="../images/work-single/robodachi-PoR/Robodachi-roster.png" class="image-popup"><img src="../images/work-single/robodachi-PoR/Robodachi-roster.png" alt="ROBODACHIのキャラクターバリエーション"></a>
+                            <a href="../images/work-single/robodachi-PoR/Specialized Gears.png" class="image-popup"><img src="../images/work-single/robodachi-PoR/Specialized Gears.png" alt="ROBODACHIの専用装備コンセプト"></a>
+                        </div>
+                        <video class="case-video case-wide-video" controls muted playsinline preload="metadata">
+                            <source src="../images/work-single/robodachi-PoR/robodachi-type-roster-animation.mp4" type="video/mp4">
+                        </video>
+                        <div class="case-copy">
+                            <p class="case-eyebrow">キャラクターシステム</p>
+                            <h2>ゲーム内の役割と結びつく、拡張可能なキャラクターIPシステム。</h2>
+                            <p>ROBODACHIは、複数のボディタイプ、特性、アクセサリー、ゲーム内役割を持つモジュール式キャラクターシステムとして設計しました。各ユニットには異なる個性、移動ロジック、想定される機能があります。</p>
+                            <ul>
+                                <li>Cube Unit — 知性、処理、戦略</li>
+                                <li>Runner Unit — スピード、偵察、探索</li>
+                                <li>Lifter Unit — パワー、防御、建設</li>
+                                <li>Humanoid Unit — 柔軟性、バランスの取れた行動</li>
+                                <li>Flying Unit — 空中偵察、高機動、高エネルギー消費</li>
+                            </ul>
+                            <p>装備はビジュアルカスタマイズとゲームプレイ補正の両方として設計しました。アイテムごとに探索、資源収集、戦闘、修理、街の維持へ異なる影響を与えます。</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="case-block">
+                    <div class="container">
+                        <div class="case-gallery">
+                            <a href="../images/work-single/robodachi-PoR/Game Concept - World – 5.png" class="image-popup"><img src="../images/work-single/robodachi-PoR/Game Concept - World – 5.png" alt="Planet of Robotsの2.5D世界コンセプト"></a>
+                            <a href="../images/work-single/robodachi-PoR/Map landscapes variationsAsset 1@300x.png" class="image-popup"><img src="../images/work-single/robodachi-PoR/Map landscapes variationsAsset 1@300x.png" alt="Planet of Robotsのマップ景観とバイオームのバリエーション"></a>
+                            <a href="../images/work-single/robodachi-PoR/PoR-world.png" class="image-popup"><img src="../images/work-single/robodachi-PoR/PoR-world.png" alt="Planet of Robotsの世界観ビジュアル"></a>
+                            <a href="../images/work-single/robodachi-PoR/robodachi-3d-View-5.jpg" class="image-popup"><img src="../images/work-single/robodachi-PoR/robodachi-3d-View-5.jpg" alt="ROBODACHIの3Dモデル"></a>
+                            <a href="../images/work-single/robodachi-PoR/blcks-View-2.jpg" class="image-popup"><img src="../images/work-single/robodachi-PoR/blcks-View-2.jpg" alt="ROBODACHIの3Dブロックモデル"></a>
+                            <a href="../images/work-single/robodachi-PoR/Storyboard.png" class="image-popup"><img src="../images/work-single/robodachi-PoR/Storyboard.png" alt="ROBODACHIコンセプト動画のストーリーボード"></a>
+                            <a href="../images/work-single/robodachi-PoR/videio screenshot.png" class="image-popup"><img src="../images/work-single/robodachi-PoR/videio screenshot.png" alt="ROBODACHIプロダクトストーリーテリング動画の画面"></a>
+                        </div>
+                        <div class="case-copy">
+                            <p class="case-eyebrow">世界観の方向性</p>
+                            <h2>より豊かな2.5D世界への発展。</h2>
+                            <p>Planet of Robotsへ発展する中で、単純なコンパニオンループを超え、より広い2.5D世界へ拡張する方法を検討しました。世界観、バイオームのバリエーション、環境による物語表現、拡張可能なビジュアル方向性を含みます。</p>
+                            <p>ROBODACHIの3Dモデルも制作し、外部アニメーションチームへ共有しました。モデルは、世界観、ユースケース、ブランドビジョンを伝えるコンセプト動画の基礎として活用されました。</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="case-block">
+                    <div class="container">
+                        <div class="case-copy">
+                            <p class="case-eyebrow">初期エンゲージメント</p>
+                            <h2>完成版ゲーム前に楽しめる軽量な交流体験。</h2>
+                            <p>完成版モバイルゲームの開発には時間がかかるため、NFT公開時点で保有者にすぐ価値を提供できる先行インタラクティブ体験が必要でした。</p>
+                        </div>
+
+                        <div class="case-subsection">
+                            <div class="case-copy">
+                                <h3>交流プロトタイプ — ケアとアイテム操作</h3>
+                                <p>ケア、食事、アイテムを使った操作など、プレイヤーがROBODACHIと気軽に交流できる仕組みを設計しました。探索ループの外でも感情的なつながりを育てます。</p>
+                            </div>
+                            <video class="case-video case-phone-video" controls muted playsinline preload="metadata" poster="images/work-single/robodachi-PoR/PoR-Game/PoR-Game-UI-Prototype-Bonding-1.png">
+                                <source src="../images/work-single/robodachi-PoR/PoR-Game/PoR-Game-UI-Prototype-Bonding-video.mp4" type="video/mp4">
+                            </video>
+                            <div class="mobile-screen-grid">
+                                <a href="../images/work-single/robodachi-PoR/PoR-Game/PoR-Game-UI-Prototype-Bonding-1.png" class="image-popup case-thumb"><img src="../images/work-single/robodachi-PoR/PoR-Game/PoR-Game-UI-Prototype-Bonding-1.png" alt="ROBODACHI交流プロトタイプ画面1"></a>
+                                <a href="../images/work-single/robodachi-PoR/PoR-Game/PoR-Game-UI-Prototype-Bonding-2.png" class="image-popup case-thumb"><img src="../images/work-single/robodachi-PoR/PoR-Game/PoR-Game-UI-Prototype-Bonding-2.png" alt="ROBODACHI交流プロトタイプ画面2"></a>
+                                <a href="../images/work-single/robodachi-PoR/PoR-Game/PoR-Game-UI-Prototype-Bonding-3.png" class="image-popup case-thumb"><img src="../images/work-single/robodachi-PoR/PoR-Game/PoR-Game-UI-Prototype-Bonding-3.png" alt="ROBODACHI交流プロトタイプ画面3"></a>
+                                <a href="../images/work-single/robodachi-PoR/PoR-Game/PoR-Game-UI-Prototype-Bonding-4.png" class="image-popup case-thumb"><img src="../images/work-single/robodachi-PoR/PoR-Game/PoR-Game-UI-Prototype-Bonding-4.png" alt="ROBODACHI交流プロトタイプ画面4"></a>
+                                <a href="../images/work-single/robodachi-PoR/PoR-Game/PoR-Game-UI-Prototype-Bonding-5.png" class="image-popup case-thumb"><img src="../images/work-single/robodachi-PoR/PoR-Game/PoR-Game-UI-Prototype-Bonding-5.png" alt="ROBODACHI交流プロトタイプ画面5"></a>
+                                <a href="../images/work-single/robodachi-PoR/PoR-Game/PoR-Game-UI-Prototype-Bonding-6.png" class="image-popup case-thumb"><img src="../images/work-single/robodachi-PoR/PoR-Game/PoR-Game-UI-Prototype-Bonding-6.png" alt="ROBODACHI交流プロトタイプ画面6"></a>
+                            </div>
+                        </div>
+
+                        <div class="case-subsection">
+                            <div class="case-copy">
+                                <h3>軽量HTMLゲーム — 暫定的なプレイ体験</h3>
+                                <p>暫定的に遊べる軽量HTMLゲームを設計しました。Planet of Robotsの最終ゲームプレイを表すものではなく、完成版を待つ初期保有者やコミュニティがROBODACHI IPと交流する手段です。</p>
+                            </div>
+                            <video class="case-video case-phone-video" controls muted playsinline preload="metadata" poster="images/work-single/robodachi-PoR/html-game-prototype-vid-still-frame.png">
+                                <source src="../images/work-single/robodachi-PoR/html-game-prototype-vid.mp4" type="video/mp4">
+                            </video>
+                        </div>
+
+                        <div class="case-subsection">
+                            <div class="case-copy">
+                                <h3>プロダクトWebサイト構想 — 世界観を伝える</h3>
+                                <p>ROBODACHIの世界観、キャラクター一覧、初期参加フローを説明するWebサイトのレイアウトも検討しました。完成版モバイル体験が存在する前にプロダクトビジョンを理解しやすくする、同じ開発前段階の目的を支えるものです。</p>
+                            </div>
+                            <div class="case-gallery case-gallery-paired">
+                                <a href="../images/work-single/robodachi-PoR/website-prototype.png" class="image-popup"><img src="../images/work-single/robodachi-PoR/website-prototype.png" alt="ROBODACHIプロダクトサイトのプロトタイプ構想"></a>
+                                <a href="../images/work-single/robodachi-PoR/website-webflow.png" class="image-popup"><img src="../images/work-single/robodachi-PoR/website-webflow.png" alt="ROBODACHIプロダクトサイトのWebflow構想"></a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="case-block">
+                    <div class="container">
+                        <div class="case-gallery">
+                            <a href="../images/work-single/robodachi-PoR/Brand Application & IP Ecosystem Extension-collage-1.png" class="image-popup"><img src="../images/work-single/robodachi-PoR/Brand Application & IP Ecosystem Extension-collage-1.png" alt="ROBODACHIのブランド展開コラージュ1"></a>
+                            <a href="../images/work-single/robodachi-PoR/Brand Application & IP Ecosystem Extension-collage-2.png" class="image-popup"><img src="../images/work-single/robodachi-PoR/Brand Application & IP Ecosystem Extension-collage-2.png" alt="ROBODACHIのブランド展開コラージュ2"></a>
+                            <a href="../images/work-single/robodachi-PoR/Brand Application & IP Ecosystem Extension-collage-3.png" class="image-popup"><img src="../images/work-single/robodachi-PoR/Brand Application & IP Ecosystem Extension-collage-3.png" alt="ROBODACHIのブランド展開コラージュ3"></a>
+                            <a href="../images/work-single/robodachi-PoR/Brand Application & IP Ecosystem Extension-collage-4.png" class="image-popup"><img src="../images/work-single/robodachi-PoR/Brand Application & IP Ecosystem Extension-collage-4.png" alt="ROBODACHIのブランド展開コラージュ4"></a>
+                            <a href="../images/work-single/robodachi-PoR/Brand Application & IP Ecosystem Extension-collage-blindbox2.png" class="image-popup"><img src="../images/work-single/robodachi-PoR/Brand Application & IP Ecosystem Extension-collage-blindbox2.png" alt="ROBODACHIのブラインドボックス玩具エコシステム構想"></a>
+                            <a href="../images/work-single/robodachi-PoR/Brand Application & IP Ecosystem Extension-collage-t-shirt.png" class="image-popup"><img src="../images/work-single/robodachi-PoR/Brand Application & IP Ecosystem Extension-collage-t-shirt.png" alt="ROBODACHIのアパレル展開コンセプト"></a>
+                            <a href="../images/work-single/robodachi-PoR/robodachi-toy.png" class="image-popup"><img src="../images/work-single/robodachi-PoR/robodachi-toy.png" alt="ROBODACHIのモジュール式玩具コンセプト"></a>
+                            <a href="../images/work-single/robodachi-PoR/Gallery.png" class="image-popup"><img src="../images/work-single/robodachi-PoR/Gallery.png" alt="ROBODACHIのブランド・商品展開コンセプト"></a>
+                            <a href="../images/work-single/robodachi-PoR/Gallery – 1.png" class="image-popup"><img src="../images/work-single/robodachi-PoR/Gallery – 1.png" alt="ROBODACHI IPエコシステム構想の拡張ギャラリー"></a>
+                        </div>
+                        <div class="case-copy">
+                            <p class="case-eyebrow">IPエコシステム</p>
+                            <h2>ROBODACHIをモバイルゲームの外へ拡張。</h2>
+                            <p>ROBODACHIをモバイルゲームの外へ広げるため、コミュニティとのコラボ、ミステリーボックス型玩具、ストリートウェア、オンラインイベント、インタラクティブコミックを含む拡張可能なキャラクターIPエコシステムとして構想しました。</p>
+                            <p>磁石式の接続機構を用いたミステリーボックス玩具も検討しました。アクセサリー、腕、ボディシェル、脚などランダムなパーツを交換・再構成でき、ゲーム内のカスタマイズシステムとコレクタブルな物理商品戦略を結びつけます。</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="case-block case-outcome">
+                    <div class="container">
+                        <figure class="case-visual">
+                            <a href="../images/work-single/robodachi-PoR/hero-robodachi.png" class="image-popup">
+                                <img src="../images/work-single/robodachi-PoR/hero-robodachi.png" alt="ROBODACHIエコシステムの最終概要ビジュアル">
+                            </a>
+                        </figure>
+                        <div class="case-copy">
+                            <p class="case-eyebrow">成果</p>
+                            <h2>UX、ゲームプレイ、IP戦略をつなぐ、開発前段階の包括的なプロダクトビジョン。</h2>
+                            <p>UXシステム、成長アーキテクチャ、キャラクターIP、GTM戦略をゼロから設計した、開発前段階の包括的なプロダクトビジョンです。製品化には至りませんでしたが、コードを書く前にプロダクト全体を定義し、設計する力を示しています。</p>
+                            <ul>
+                                <li>0→1のプロダクト定義</li>
+                                <li>UXシステムアーキテクチャ</li>
+                                <li>モバイルインタラクションフロー設計</li>
+                                <li>プロトタイプの進化と反復</li>
+                                <li>ゲームループと成長ロジック</li>
+                                <li>キャラクターIPとビジュアルシステム設計</li>
+                                <li>完成版開発前の初期エンゲージメント戦略</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <section class="bg-dark-1 text-dark no-top no-bottom">
+                <div class="wow fadeInRight d-flex">
+                    <div class="de-marquee-list wow">
+                        <div class="d-item">
+                            <span class="d-item-txt">0→1のプロダクト定義</span>
+                            <span class="d-item-circle"></span>
+                            <span class="d-item-txt">ゲームUX</span>
+                            <span class="d-item-circle"></span>
+                            <span class="d-item-txt">モバイルインタラクションフロー</span>
+                            <span class="d-item-circle"></span>
+                            <span class="d-item-txt">ビジュアルIPシステム</span>
+                            <span class="d-item-circle"></span>
+                            <span class="d-item-txt">プロダクトストーリーテリング</span>
+                            <span class="d-item-circle"></span>
+                            <span class="d-item-txt">プロトタイプ設計</span>
+                            <span class="d-item-circle"></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer>
+            <div class="container-fluid">
+                <div class="px-2">
+                    <div class="row g-4 justify-content-center">
+                        <div class="col-lg-6 text-center">
+                            <div class="d-menu-1 wow" data-wow-delay=".3s">
+                                <ul>
+                                    <li><a href="mailto:rober24.95@gmail.com">メール</a></li>
+                                    <li><a href="https://www.linkedin.com/in/rober-toro-802953189/">LinkedIn</a></li>
+                                </ul>
+                                <p class="no-bottom">© 2026 Rober Toro. カスタマイズした静的HTMLテンプレートで制作したポートフォリオです。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../js/plugins.js"></script>
+    <script src="../js/designesia.js"></script>
+    <script src="../js/custom-marquee.js"></script>
+</body>
+
+</html>

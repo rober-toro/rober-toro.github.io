@@ -815,3 +815,50 @@ section.bg-dark-1.text-dark {
         height: 300px;
     }
 }
+.language-switch {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 58px;
+    min-height: 42px;
+    margin-right: 12px;
+    padding: 8px 12px;
+    border: 1px solid rgba(0, 0, 0, .2);
+    color: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .04em;
+    line-height: 1;
+    text-decoration: none;
+}
+
+.language-switch:hover,
+.language-switch:focus-visible {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+html[lang="ja"] body {
+    font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
+    line-height: 1.8;
+    word-break: normal;
+    overflow-wrap: anywhere;
+}
+
+html[lang="ja"] h1,
+html[lang="ja"] h2,
+html[lang="ja"] h3,
+html[lang="ja"] h4,
+html[lang="ja"] h5,
+html[lang="ja"] h6 {
+    line-height: 1.35;
+}
+
+@media (max-width: 991.98px) {
+    .language-switch {
+        min-width: 52px;
+        min-height: 38px;
+        margin-right: 8px;
+        padding: 7px 9px;
+    }
+}
